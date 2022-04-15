@@ -10,7 +10,14 @@
 
   <ItemGroup>
     <Content Remove="Views\Employee\AddEditEmployee.cshtml" />
-    <Content Remove="Views\Login\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\Denied.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Login.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Home\Secure.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

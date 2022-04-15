@@ -37,7 +37,7 @@ namespace EmployeeManagement.Controllers
             return View();
         }
 
-        [HttpGet("EmployeeLogin")]
+        [HttpGet]
         public IActionResult EmployeeLogin(string returnURL)
         {
             ViewData["ReturnUrl"] = returnURL;
@@ -83,7 +83,7 @@ namespace EmployeeManagement.Controllers
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
                     await HttpContext.SignInAsync(claimsPrincipal);
-                    return Redirect("home/index");
+                    return Redirect("Employee/index");
                 }
                 TempData["error"] = "User not found.";
                 return View("EmployeeLogin");

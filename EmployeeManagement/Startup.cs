@@ -29,8 +29,6 @@ namespace EmployeeManagement
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
                     {
-                        options.LoginPath = "/login";
-                        options.AccessDeniedPath = "/denied";
                         options.Events = new CookieAuthenticationEvents()
                         {
                             OnSignedIn = async context =>
@@ -73,11 +71,13 @@ namespace EmployeeManagement
             app.UseAuthentication();
             app.UseAuthorization();
 
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Login}/{action=EmployeeLogin}/{id?}");
+                endpoints.MapControllers();
             });
         }
     }
