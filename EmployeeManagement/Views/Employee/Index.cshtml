@@ -1,0 +1,77 @@
+﻿@model IEnumerable<EmployeeManagement.Models.EmployeeDetails>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    var sucessmessage = TempData["sucessmessage"] as string;
+}
+<h1>Employee List</h1>
+
+<p>
+    <a asp-action="AddEmployee" class="btn btn-primary">Create New</a>
+</p>
+
+@if (!string.IsNullOrEmpty(sucessmessage))
+{
+    <span class="bg-success">@sucessmessage</span>
+}
+<table class="table table-bordered">
+    <thead class="table-primary">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Desgination)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOB)
+            </th>
+
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mobile)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Desgination)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DOB)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditEmployee", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Delete", "DeleteEmployee", new { id = item.Id }, new { @class = "btn btn-secondary" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
