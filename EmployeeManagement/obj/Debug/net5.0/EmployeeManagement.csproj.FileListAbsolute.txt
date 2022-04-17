@@ -247,3 +247,5 @@ E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Vie
 E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
 E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\Home\Secure.cshtml.g.cs
+E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\ScheduleMeeting\Index.cshtml.g.cs
+E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\ScheduleMeeting\MeetingData.cshtml.g.cs

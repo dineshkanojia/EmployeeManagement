@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   
+   
+
+
+
 </head>
 <body>
     <header>
@@ -27,7 +33,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Leave Management</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Secure">Schedule Meeting</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ScheduleMeeting" asp-action="Index">Schedule Meeting</a>
                         </li>
                         @if (User.Identity.IsAuthenticated)
                         {

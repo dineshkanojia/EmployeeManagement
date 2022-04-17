@@ -1,0 +1,22 @@
+﻿@model IEnumerable<EmployeeManagement.Models.MeetingEvent>
+@{
+    ViewData["Title"] = "MeetingData";
+}
+
+<h1>MeetingData</h1>
+
+<data>
+    @foreach (var myevent in Model)
+    {
+    <event id="@myevent.Id">
+        <start_date>
+            <![CDATA[@String.Format("{0:MM/dd/yyyy HH:mm}", @myevent.StartDate)]]>
+        </start_date>
+        <end_date>
+            <![CDATA[@String.Format("{0:MM/dd/yyyy HH:mm}", @myevent.EndDate)]]>
+        </end_date>
+        <text><![CDATA[@myevent.Description]]></text>
+        <useremail><![CDATA[@myevent.UserEmail]]></useremail>
+    </event>
+    }
+</data>
