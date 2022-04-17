@@ -25,19 +25,23 @@
         </tr>
         <tr>
             <td>
-                <label asp-for="StartDate" class="control-label"></label>
+                @Html.LabelFor(m => m.StartDate, new { @class = "control-label" })
+
+
+
             </td>
             <td>
-                <input asp-for="StartDate"  type="text" id="StartDate" />
+                @Html.TextBoxFor(m => m.StartDate, "{0:d}", new { @class = "form-control datepicker", @Value = Model.StartDate.ToString("yyyy-MM-dd"), @type = "date" })
                 <span asp-validation-for="StartDate" class="text-danger"></span>
             </td>
         </tr>
         <tr>
             <td>
-                <label asp-for="EndDate" class="control-label"></label>
+                @Html.LabelFor(m => m.EndDate, new { @class = "control-label" })
+
             </td>
             <td>
-                <input asp-for="EndDate"  type="text" id="EndDate" />
+                @Html.TextBoxFor(m => m.EndDate, "{0:d}", new { @class = "form-control datepicker", @Value = Model.EndDate.ToString("yyyy-MM-dd"), @type = "date" })
                 <span asp-validation-for="EndDate" class="text-danger"></span>
             </td>
         </tr>

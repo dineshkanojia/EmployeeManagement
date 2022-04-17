@@ -94,7 +94,8 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label asp-for="DOB" class="control-label"></label>
-                <input asp-for="DOB" class="form-control" type="text" id="datepicker" />
+                @*<input asp-for="DOB" class="form-control" type="datetime" id="datepicker" />*@
+                @Html.TextBoxFor(m => m.DOB, "{0:d}", new { @class = "form-control datepicker", @Value = Model.DOB.ToString("yyyy-MM-dd"), @type = "date", @id = "datepicker" })
                 <span asp-validation-for="DOB" class="text-danger"></span>
             </div>
         </div>
