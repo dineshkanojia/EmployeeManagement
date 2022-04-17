@@ -48,7 +48,7 @@ namespace EmployeeManagement.Controllers
         public async Task<ActionResult> ValidateLogin(string Username, string Password, string returnURL)
         {
             ViewData["ReturnUrl"] = returnURL;
-
+            TempData["userEmail"] = Username;
             EmployeeLogin employeeLogin = new EmployeeLogin();
             employeeLogin.Email = Username;
             employeeLogin.Password = Password;

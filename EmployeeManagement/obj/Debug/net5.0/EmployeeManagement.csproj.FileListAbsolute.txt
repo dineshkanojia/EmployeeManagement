@@ -209,7 +209,6 @@ E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\bin\Debug\net5.0\zh-Hans\M
 E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
-E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\EmployeeManagement.csproj.AssemblyReference.cache
 E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\EmployeeManagement.GeneratedMSBuildEditorConfig.editorconfig
 E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\EmployeeManagement.AssemblyInfoInputs.cache
 E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\EmployeeManagement.AssemblyInfo.cs
@@ -249,3 +248,8 @@ E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Vie
 E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\Home\Secure.cshtml.g.cs
 E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\ScheduleMeeting\Index.cshtml.g.cs
 E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\ScheduleMeeting\MeetingData.cshtml.g.cs
+E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\EmployeeLeave\Index.cshtml.g.cs
+E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\EmployeeLeave\ApplyLeave.cshtml.g.cs
+E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\EmployeeLeave\EditLeaveRequest.cshtml.g.cs
+E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\EmployeeLeave\CancelLeaveRequest.cshtml.g.cs
+E:\NCI\Term2\SC\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\EmployeeManagement.csproj.AssemblyReference.cache

@@ -1,0 +1,104 @@
+﻿@model EmployeeManagement.Models.EmployeeLeave
+
+@{
+    ViewData["Title"] = "Apply Leave";
+    var userEmail = TempData["userEmail"] as string;
+}
+<script type="text/javascript">
+    $(function () { // will trigger when the document is ready
+        $('.datepicker').datepicker(); //Initialise any date pickers
+    });
+</script>
+<title>Apply Leave</title>
+<h4>Apply Leave</h4>
+<hr />
+<form asp-action="ApplyLeave">
+    <table>
+        <tr>
+            <td>
+                <label asp-for="EmployeeName" class="control-label"></label>
+            </td>
+            <td>
+                <input asp-for="EmployeeName" class="form-control" />
+                <span asp-validation-for="EmployeeName" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="StartDate" class="control-label"></label>
+            </td>
+            <td>
+                <input asp-for="StartDate"  type="text" id="StartDate" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="EndDate" class="control-label"></label>
+            </td>
+            <td>
+                <input asp-for="EndDate"  type="text" id="EndDate" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="LeaveType" class="control-label"></label>
+            </td>
+            <td>
+                <select asp-for="LeaveType"
+                        class="form-control"
+                        asp-items="Html.GetEnumSelectList<LeaveTypeEnum>()">
+                    <option>Select type ...</option>
+                </select>
+                <span asp-validation-for="LeaveType" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="Comments" class="control-label"></label>
+            </td>
+            <td>
+                <input asp-for="Comments" class="form-control" />
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <input type="submit" value="Submit Request" class="btn btn-primary" />
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</form>
+
+
+@section Scripts
+{
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#EndDate").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "tr"
+            });
+
+            $("#StartDate").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "tr"
+            });
+        });
+    </script>
+}

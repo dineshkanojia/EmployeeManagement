@@ -1,0 +1,99 @@
+﻿@model IEnumerable<EmployeeManagement.Models.EmployeeLeave>
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    var sucessmessage = TempData["sucessleavemessage"] as string;
+    var userEmail = TempData["userEmail"] as string;
+}
+
+<h1>Leave Requests List</h1>
+
+<p>
+    <a asp-action="ApplyLeave" class="btn btn-primary">Apply Leave</a>
+</p>
+
+@if (!string.IsNullOrEmpty(sucessmessage))
+{
+    <span class="bg-success">@sucessmessage</span>
+}
+
+<table class="table table-bordered">
+    <thead class="table-primary">
+        <tr>
+            <th hidden="hidden">
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeName)
+            </th>
+            <th style="width:200px">
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th style="width:200px">
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th style="width:200px">
+                @Html.DisplayNameFor(model => model.LeaveType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RequestDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApprovedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApprovedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comments)
+            </th>
+            <th style="width:300px">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td hidden="hidden">
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LeaveType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RequestDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApprovedDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Approved_By)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Comments)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditLeaveRequest", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Cancel", "CancelLeaveRequest", new { id = item.Id }, new { @class = "btn btn-secondary" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

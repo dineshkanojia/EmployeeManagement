@@ -94,7 +94,7 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label asp-for="DOB" class="control-label"></label>
-                <input asp-for="DOB" class="form-control" type="datetime" />
+                <input asp-for="DOB" class="form-control" type="text" id="datepicker" />
                 <span asp-validation-for="DOB" class="text-danger"></span>
             </div>
         </div>
@@ -113,4 +113,21 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+
+@section Scripts
+{
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "tr"
+            });
+        });
+    </script>
+}
 
